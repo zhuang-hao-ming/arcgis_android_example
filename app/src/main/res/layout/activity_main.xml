@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.haoming.mygis.MainActivity"
+    android:orientation="vertical"
+    >
+
+    <com.esri.arcgisruntime.mapping.view.MapView
+        android:id="@+id/mapview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"></com.esri.arcgisruntime.mapping.view.MapView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <Button
+            android:onClick="btnZoomIn"
+            android:id="@+id/button_zoom_in"
+
+            android:text="+"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:onClick="btnZoomOut"
+            android:id="@+id/button_zoom_out"
+            android:text="-"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        >
+
+
+        <Button
+            android:tag="1.0"
+            android:onClick="btnAddEarthquake"
+            android:id="@+id/button_eq_1"
+            android:text="大于1的地震"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:tag="2.5"
+            android:onClick="btnAddEarthquake"
+            android:id="@+id/button_eq_25"
+            android:text="大于2.5的地震"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:tag="4.5"
+            android:onClick="btnAddEarthquake"
+            android:id="@+id/button_eq_45"
+            android:text="大于4.5的地震"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</LinearLayout>
